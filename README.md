@@ -32,6 +32,13 @@ The analysis was completed as part of my Senior Seminar in Economics at Michigan
 - Data cleaning and validation in Stata
 
 ---
+## Results
+
+Using a Two-Way Fixed Effects panel regression, the analysis finds that casino openings are associated with a modest reduction in county unemployment. However, after controlling for county and year fixed effects, the estimated effect is not statistically significant.
+
+These findings suggest that casinos alone are unlikely to be a reliable policy tool for reducing unemployment.
+
+---
 
 ## Skills Demonstrated
 
