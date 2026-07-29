@@ -34,9 +34,8 @@ Overall, the analysis finds a statistically significant positive association bet
 # Regression Results
 
 <p align="center">
-  <img src="regression_results.png" width="850">
-</p>
-
+  <img src="twfe_results.png" width="850">
+</p> 
 ---
 
 ## Methodology
@@ -56,7 +55,6 @@ The empirical analysis estimates the relationship between casino openings and co
 <p align="center">
   <img src="summary_statistics.png" width="850">
 </p>
-
 ---
 
 ## Repository Structure
