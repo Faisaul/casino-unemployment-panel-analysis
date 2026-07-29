@@ -2,9 +2,9 @@
 
 ## Overview
 
-This project examines whether casino openings reduce county-level unemployment in the United States using modern panel data econometric methods.
+This project examines the relationship between casino openings and county unemployment in the United States using modern panel data econometric methods.
 
-The analysis was completed as part of my Senior Seminar in Economics at Michigan State University and combines data from the Bureau of Labor Statistics (BLS) and additional public sources to evaluate the labor market effects of casino openings.
+Completed as part of my Senior Seminar in Economics at Michigan State University, the project combines publicly available labor market and casino data to evaluate whether casino development improves local employment outcomes. The analysis emphasizes reproducible research, transparent data preparation, and evidence-based policy evaluation.
 
 ---
 
@@ -16,58 +16,78 @@ The analysis was completed as part of my Senior Seminar in Economics at Michigan
 
 ## Dataset
 
-- 112,661 county-year observations
-- Bureau of Labor Statistics (LAUS)
+- **112,569 county-year observations**
+- **Time Period:** 1990–2024
+- **Primary Source:** Bureau of Labor Statistics (Local Area Unemployment Statistics)
 - Publicly available casino opening records
-- Additional county-level public datasets
+- County-level panel dataset
 
 ---
 
 ## Methodology
 
-- Two-Way Fixed Effects (TWFE)
+The analysis estimates the relationship between casino openings and county unemployment using:
+
+- Two-Way Fixed Effects (TWFE) Panel Regression
 - Ordinary Least Squares (OLS)
 - County-clustered robust standard errors
 - Panel data analysis
 - Data cleaning and validation in Stata
 
 ---
-## Results
 
-Using a Two-Way Fixed Effects panel regression, the analysis finds that casino openings are associated with a modest reduction in county unemployment. However, after controlling for county and year fixed effects, the estimated effect is not statistically significant.
+# Summary Statistics
 
-These findings suggest that casinos alone are unlikely to be a reliable policy tool for reducing unemployment.
+<p align="center">
+<img src="summary_statistics.png" width="700">
+</p>
+
+---
+
+# Regression Results
+
+<p align="center">
+<img src="twfe_results.png" width="700">
+</p>
+
+---
+
+## Key Findings
+
+The Two-Way Fixed Effects model estimates a **positive and statistically significant** relationship between casino operation and county unemployment after controlling for county and year fixed effects.
+
+The estimated coefficient suggests that counties with an operating casino experienced unemployment rates approximately **0.42 percentage points higher** than comparable counties without an operating casino.
+
+These findings suggest that casino development alone should **not** be viewed as a guaranteed strategy for improving local labor market outcomes and that broader economic conditions continue to play an important role.
 
 ---
 
 ## Skills Demonstrated
 
-- Econometric Analysis
+- Applied Econometrics
 - Panel Data Analysis
+- Two-Way Fixed Effects (TWFE)
 - Statistical Modeling
-- Data Cleaning
-- Data Validation
+- Data Cleaning & Validation
 - Stata Programming
 - Research Design
 - Policy Analysis
 - Data Visualization
+- Reproducible Research
 
 ---
 
 ## Repository Structure
 
-```
-code/
-paper/
-figures/
-output/
-```
-
----
-
-## Key Finding
-
-Casino openings were associated with a modest reduction in county unemployment after controlling for county and year fixed effects. However, the estimated effect was not statistically significant.
+| File | Purpose |
+|------|---------|
+| `master.do` | Executes the complete analysis workflow |
+| `01_prepare_data.do` | Cleans unemployment data |
+| `02_prepare_lookup.do` | Creates county and state lookup tables |
+| `03_merge_data.do` | Merges datasets into a panel |
+| `04_prepare_casino.do` | Constructs casino treatment variables |
+| `05_build_analysis.do` | Builds the final analysis dataset |
+| `06_analysis.do` | Estimates econometric models and produces tables |
 
 ---
 
@@ -78,9 +98,35 @@ Casino openings were associated with a modest reduction in county unemployment a
 
 ---
 
-## Future Improvements
+## Replication
 
-- Event Study analysis
-- Difference-in-Differences robustness checks
-- Additional control variables
-- Geographic spillover analysis
+This repository contains the complete Stata workflow used in the analysis.
+
+Some raw datasets are publicly available but are **not redistributed** in this repository due to licensing and data source requirements. The analysis can be replicated by obtaining the original datasets from:
+
+- Bureau of Labor Statistics (LAUS)
+- Public casino opening records
+
+---
+
+## Research Paper
+
+The complete paper is available in this repository:
+
+**📄 Casino_Openings_and_County_Labor_Markets.pdf**
+
+---
+
+## Author
+
+**Faisal Mulla**
+
+Bachelor of Arts in Economics  
+Michigan State University
+
+Research Interests:
+- Applied Econometrics
+- Labor Economics
+- Economic Development
+- Energy Economics
+- Public Policy
