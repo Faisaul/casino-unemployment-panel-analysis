@@ -1,10 +1,17 @@
 # Casino Openings and County Labor Markets: A Panel Data Analysis
 
+![Stata](https://img.shields.io/badge/Stata-Econometrics-blue)
+![Method](https://img.shields.io/badge/Method-Two--Way%20Fixed%20Effects-success)
+![Observations](https://img.shields.io/badge/Observations-112%2C569-orange)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+
+---
+
 ## Overview
 
-This project examines the relationship between casino openings and county unemployment in the United States using modern panel data econometric methods.
+This repository contains the complete replication package for my senior econometrics research project at Michigan State University.
 
-Completed as part of my Senior Seminar in Economics at Michigan State University, the project combines publicly available labor market and casino data to evaluate whether casino development improves local employment outcomes. The analysis emphasizes reproducible research, transparent data preparation, and evidence-based policy evaluation.
+Using a county-level panel dataset of **112,569 observations (1990–2024)**, I evaluate whether casino openings improve local labor market outcomes using a **Two-Way Fixed Effects (TWFE)** panel regression model. The project emphasizes reproducible research, transparent data preparation, and evidence-based policy analysis.
 
 ---
 
@@ -14,19 +21,28 @@ Completed as part of my Senior Seminar in Economics at Michigan State University
 
 ---
 
-## Dataset
+# Key Findings
 
-- **112,569 county-year observations**
-- **Time Period:** 1990–2024
-- **Primary Source:** Bureau of Labor Statistics (Local Area Unemployment Statistics)
-- Publicly available casino opening records
-- County-level panel dataset
+- **Dataset:** 112,569 county-year observations
+- **Method:** Two-Way Fixed Effects (TWFE)
+- **Estimated Effect:** +0.422 percentage points
+- **Statistical Significance:** p < 0.01
+
+The analysis finds a **positive and statistically significant** relationship between casino operation and county unemployment after controlling for county and year fixed effects. These findings suggest that casino development alone should **not** be viewed as a guaranteed strategy for improving local labor market outcomes and that broader economic conditions continue to play an important role.
+
+---
+
+# Regression Results
+
+<p align="center">
+  <img src="regression_results.png" width="850">
+</p>
 
 ---
 
 ## Methodology
 
-The analysis estimates the relationship between casino openings and county unemployment using:
+The empirical analysis estimates the relationship between casino openings and county unemployment using:
 
 - Two-Way Fixed Effects (TWFE) Panel Regression
 - Ordinary Least Squares (OLS)
@@ -39,26 +55,22 @@ The analysis estimates the relationship between casino openings and county unemp
 # Summary Statistics
 
 <p align="center">
-<img src="summary_statistics.png" width="700">
+  <img src="summary_statistics.png" width="850">
 </p>
 
 ---
 
-# Regression Results
+## Repository Structure
 
-<p align="center">
-<img src="twfe_results.png" width="700">
-</p>
-
----
-
-## Key Findings
-
-The Two-Way Fixed Effects model estimates a **positive and statistically significant** relationship between casino operation and county unemployment after controlling for county and year fixed effects.
-
-The estimated coefficient suggests that counties with an operating casino experienced unemployment rates approximately **0.42 percentage points higher** than comparable counties without an operating casino.
-
-These findings suggest that casino development alone should **not** be viewed as a guaranteed strategy for improving local labor market outcomes and that broader economic conditions continue to play an important role.
+| File | Purpose |
+|------|---------|
+| `master.do` | Executes the complete analysis workflow |
+| `01_prepare_data.do` | Cleans unemployment data |
+| `02_prepare_lookup.do` | Creates county and state lookup tables |
+| `03_merge_data.do` | Merges datasets into a panel |
+| `04_prepare_casino.do` | Constructs casino treatment variables |
+| `05_build_analysis.do` | Builds the final analysis dataset |
+| `06_analysis.do` | Estimates econometric models and produces regression tables |
 
 ---
 
@@ -77,20 +89,6 @@ These findings suggest that casino development alone should **not** be viewed as
 
 ---
 
-## Repository Structure
-
-| File | Purpose |
-|------|---------|
-| `master.do` | Executes the complete analysis workflow |
-| `01_prepare_data.do` | Cleans unemployment data |
-| `02_prepare_lookup.do` | Creates county and state lookup tables |
-| `03_merge_data.do` | Merges datasets into a panel |
-| `04_prepare_casino.do` | Constructs casino treatment variables |
-| `05_build_analysis.do` | Builds the final analysis dataset |
-| `06_analysis.do` | Estimates econometric models and produces tables |
-
----
-
 ## Software
 
 - Stata
@@ -100,31 +98,27 @@ These findings suggest that casino development alone should **not** be viewed as
 
 ## Replication
 
-This repository contains the complete Stata workflow used in the analysis.
+This repository contains the complete Stata workflow used throughout the analysis.
 
-Some raw datasets are publicly available but are **not redistributed** in this repository due to licensing and data source requirements. The analysis can be replicated by obtaining the original datasets from:
+The raw datasets are **not redistributed** because they originate from publicly available external sources. The project can be replicated by obtaining the original data from:
 
-- Bureau of Labor Statistics (LAUS)
+- U.S. Bureau of Labor Statistics (Local Area Unemployment Statistics)
 - Public casino opening records
 
 ---
 
 ## Research Paper
 
-The complete paper is available in this repository:
+The complete research paper is included in this repository.
 
-**📄 Casino_Openings_and_County_Labor_Markets.pdf**
+📄 **Casino_Openings_and_County_Labor_Markets.pdf**
 
 ---
 
-## Author
+## About
 
-**Faisal Mulla**
+Created by **Faisal Mulla**, an Economics student at Michigan State University with research interests in:
 
-Bachelor of Arts in Economics  
-Michigan State University
-
-Research Interests:
 - Applied Econometrics
 - Labor Economics
 - Economic Development
