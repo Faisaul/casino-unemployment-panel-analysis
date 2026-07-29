@@ -11,7 +11,7 @@
 
 This repository contains the complete replication package for my senior econometrics research project at Michigan State University.
 
-Using a county-level panel dataset of **112,569 observations (1990–2024)**, I evaluate whether casino openings improve local labor market outcomes using a **Two-Way Fixed Effects (TWFE)** panel regression model. The project emphasizes reproducible research, transparent data preparation, and evidence-based policy analysis.
+Using a county-level panel dataset of **112,569 observations (1990–2024)**, I evaluate whether casino openings improve local labor market outcomes using a Two-Way Fixed Effects panel regression model.
 
 ---
 
@@ -21,15 +21,14 @@ Using a county-level panel dataset of **112,569 observations (1990–2024)**, I 
 
 ---
 
-# Key Findings
+## Key Findings
 
 - **Dataset:** 112,569 county-year observations
 - **Method:** Two-Way Fixed Effects (TWFE)
 - **Estimated Effect:** +0.422 percentage points
 - **Statistical Significance:** p < 0.01
 
-The analysis finds a **positive and statistically significant** relationship between casino operation and county unemployment after controlling for county and year fixed effects. These findings suggest that casino development alone should **not** be viewed as a guaranteed strategy for improving local labor market outcomes and that broader economic conditions continue to play an important role.
-
+Overall, the analysis finds a statistically significant positive association between casino operation and county unemployment after controlling for county and year fixed effects. These findings suggest that casino development alone should not be viewed as a guaranteed strategy for improving local labor market outcomes.
 ---
 
 # Regression Results
